@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasugaaram — The Organic Evolution</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sticky Glassmorphic Header -->
+    <header class="home-header">
+        <div class="logo-container">
+            <a href="#"><img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
+                <div class="logo-text">
+                    <h1>Pasugaaram</h1>
+                    <span>Organic Evolution</span>
+                </div>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> <span
+                            class="nav-item">Home</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a>
+                </li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Animated Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-subtitle">100% Pure & Fresh Organic Products</span>
+            <h1 class="hero-title">Pasugaaram</h1>
+            <p class="hero-description">Nurtured by nature, harvested with love. Discover premium chemical-free fruits,
+                vegetables, honey, and organic manure straight from local organic farms.</p>
+            <div class="hero-buttons">
+                <a href="#categories" class="btn-primary">Explore Products <i class="fas fa-chevron-down"></i></a>
+                <a href="about.html" class="btn-secondary">Our Story <i class="fas fa-leaf"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisements / Promotion Carousel -->
+    <div class="section-title-wrapper">
+        <h2 class="section-title">Special Offers</h2>
+        <p class="section-subtitle">Fresh updates, farm-to-table delivery cycles, and organic farming achievements</p>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="./images/adv1.jpg" alt="Organic farming produce" onerror="this.src='./images/bg.jpg'">
+        </div>
+        <div class="mySlides fade">
+            <img src="./images/adv2.jpg" alt="Fresh fruits collection" onerror="this.src='./images/bg3.jpg'">
+        </div>
+        <div class="mySlides fade">
+            <img src="./images/adv3.jpg" alt="Premium organic honey" onerror="this.src='./images/bg5.jpg'">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- Product Categories section -->
+    <section id="categories">
+        <div class="section-title-wrapper">
+            <h2 class="section-title">Product Categories</h2>
+            <p class="section-subtitle">Flip each card to discover benefits and explore our premium organic catalog</p>
+        </div>
+
+        <div class="categories-container">
+            <!-- Fruits Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Fruits</h3>
+                        <img src="./images/c2.png" alt="Fruits">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Organic Fruits</h3>
+                        <ul>
+                            <li>Rich in essential vitamins</li>
+                            <li>Antioxidant booster</li>
+                            <li>High fiber nutrition</li>
+                            <li>Pesticide-free farming</li>
+                        </ul>
+                        <a href="fruits.html" class="btn-view">Browse Fruits</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vegetables Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Vegetables</h3>
+                        <img src="./images/c3.png" alt="Vegetables">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Vegetables</h3>
+                        <ul>
+                            <li>Harvested daily</li>
+                            <li>Zero chemical spray</li>
+                            <li>Rich mineral source</li>
+                            <li>Fresh leafy greens</li>
+                        </ul>
+                        <a href="vegetables.html" class="btn-view">Browse Veggies</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Honey Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Honey</h3>
+                        <img src="./images/Bee-Honey-PNG-Photos.png" alt="Honey">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Natural Honey</h3>
+                        <ul>
+                            <li>Raw & unprocessed</li>
+                            <li>Anti-inflammatory</li>
+                            <li>Natural blood purifier</li>
+                            <li>Sourced from hills</li>
+                        </ul>
+                        <a href="honey.html" class="btn-view">Browse Honey</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milk Products Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Milk Products</h3>
+                        <img src="./images/milk-dairy.png" alt="Milk Products">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Dairy Products</h3>
+                        <ul>
+                            <li>A2 Cow milk origin</li>
+                            <li>Traditional butter churning</li>
+                            <li>High protein Paneer</li>
+                            <li>No synthetic hormones</li>
+                        </ul>
+                        <a href="milkproducts.html" class="btn-view">Browse Dairy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spices Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Spices</h3>
+                        <img src="./images/spices.png" alt="Spices">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Whole Spices</h3>
+                        <ul>
+                            <li>Handmade processing</li>
+                            <li>Rich original curcumin</li>
+                            <li>Intense premium aroma</li>
+                            <li>Antimicrobial values</li>
+                        </ul>
+                        <a href="spice.html" class="btn-view">Browse Spices</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sauce Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Sauces</h3>
+                        <img src="./images/sauce.png" alt="Sauces">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Organic Sauces</h3>
+                        <ul>
+                            <li>No added starch</li>
+                            <li>Zero artificial colors</li>
+                            <li>Naturally spiced flavours</li>
+                            <li>Low sodium counts</li>
+                        </ul>
+                        <a href="sauce.html" class="btn-view">Browse Sauces</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fresh Juice Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Fresh Juices</h3>
+                        <img src="./images/juice.png" alt="Juice">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Fresh Juices</h3>
+                        <ul>
+                            <li>Cold-pressed nutrition</li>
+                            <li>No concentrates</li>
+                            <li>100% immune booster</li>
+                            <li>Zero processed sugars</li>
+                        </ul>
+                        <a href="freshjuice.html" class="btn-view">Browse Juices</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fertilizers Card -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Fertilizers</h3>
+                        <img src="./images/manure2.png" alt="Fertilizers">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Organic Manure</h3>
+                        <ul>
+                            <li>Natural Vermicompost</li>
+                            <li>Soil texture booster</li>
+                            <li>Enriches plant growth</li>
+                            <li>Porous aeration</li>
+                        </ul>
+                        <a href="fertilizer.html" class="btn-view">Browse Manures</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Count Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-number" data-target="15000" data-suffix="+">0</div>
+                <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-seedling"></i>
+                <div class="stat-number" data-target="100" data-suffix="%">0</div>
+                <div class="stat-label">Organic Certified</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-truck"></i>
+                <div class="stat-number" data-target="45" data-suffix=" mins">0</div>
+                <div class="stat-label">Freshness Guarantee</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <div class="stat-number" data-target="120" data-suffix="+">0</div>
+                <div class="stat-label">Partner Farms</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-logo">
+                <img src="./images/logonew.png" alt="Footer Logo">
+                <h2>Pasugaaram</h2>
+                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Policy Info</h3>
+                <ul>
+                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">Help & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div class="footer-download">
+                    <img src="./images/gplay.png" alt="Google Play Store">
+                    <img src="./images/qrcode.png" alt="QR Code scanner">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
+            <p>Designed with ❤️ for Healthy living.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

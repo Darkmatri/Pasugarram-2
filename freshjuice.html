@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Juices — Pasugaaram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body data-category="juice">
+
+    <!-- Sticky Header -->
+    <header class="home-header">
+        <div class="logo-container">
+            <img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
+            <div class="logo-text">
+                <h1>Pasugaaram</h1>
+                <span>Organic Evolution</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
+                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a></li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Categories</li>
+            <li>Fresh Juices</li>
+        </ul>
+    </div>
+
+    <!-- Section Title -->
+    <section class="section-title-wrapper">
+        <h2 class="section-title">Cold Pressed Fresh Juices</h2>
+        <p class="section-subtitle">100% natural fruit juices, squeezed fresh on order with zero added water, sugar, or preservatives.</p>
+    </section>
+
+    <!-- Search and Filters -->
+    <div class="filter-search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="product-search" placeholder="Search fresh juices...">
+        </div>
+        <div class="filter-options">
+            <select id="product-sort" class="filter-select">
+                <option value="">Sort By default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Rating: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="product-grid" id="products-grid">
+        <!-- Rendered dynamically by script.js -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-logo">
+                <h2>Pasugaaram</h2>
+                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
+                <img src="./images/logonew.png" alt="Footer Logo">
+            </div>
+            <div class="footer-col">
+                <h3>Policy Info</h3>
+                <ul>
+                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faq.html">Help & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Get App</h3>
+                <div class="footer-download">
+                    <img src="./images/gplay.png" alt="Google Play Store">
+                    <img src="./images/qrcode.png" alt="QR Code scanner">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
+            <p>Designed with ❤️ for Healthy living.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
