@@ -1,0 +1,62 @@
+{
+  "fruits": [
+    { "id": "f1", "name": "Apple", "category": "fruits", "price": 120, "unit": "kg", "image": "./fruits/apple.png", "rating": 4.5, "description": "Fresh organic apples, rich in antioxidants and dietary fiber.", "stock": 50 },
+    { "id": "f2", "name": "Banana", "category": "fruits", "price": 40, "unit": "dozen", "image": "./fruits/banana.png", "rating": 4.3, "description": "Naturally ripened bananas, excellent source of potassium.", "stock": 80 },
+    { "id": "f3", "name": "Blackberry", "category": "fruits", "price": 200, "unit": "kg", "image": "./fruits/blackberry.png", "rating": 4.6, "description": "Farm-fresh blackberries packed with vitamins C and K.", "stock": 20 },
+    { "id": "f4", "name": "Grape", "category": "fruits", "price": 80, "unit": "kg", "image": "./fruits/grape.png", "rating": 4.4, "description": "Sweet seedless grapes, naturally grown without pesticides.", "stock": 40 },
+    { "id": "f5", "name": "Guava", "category": "fruits", "price": 60, "unit": "kg", "image": "./fruits/guava.png", "rating": 4.2, "description": "Vitamin C-rich guavas from organic orchards.", "stock": 35 },
+    { "id": "f6", "name": "Kiwi", "category": "fruits", "price": 180, "unit": "kg", "image": "./fruits/kiwi.png", "rating": 4.7, "description": "Tangy imported kiwi, high in vitamin C and dietary fiber.", "stock": 25 },
+    { "id": "f7", "name": "Lemon", "category": "fruits", "price": 30, "unit": "kg", "image": "./fruits/lemon.png", "rating": 4.1, "description": "Juicy lemons, perfect for detox and immunity boost.", "stock": 100 },
+    { "id": "f8", "name": "Mango", "category": "fruits", "price": 150, "unit": "kg", "image": "./fruits/mango.png", "rating": 4.8, "description": "Alphonso mangoes — the king of fruits, chemical-free.", "stock": 60 },
+    { "id": "f9", "name": "Orange", "category": "fruits", "price": 90, "unit": "kg", "image": "./fruits/orange.png", "rating": 4.4, "description": "Navel oranges, rich in vitamin C and flavonoids.", "stock": 45 },
+    { "id": "f10", "name": "Pear", "category": "fruits", "price": 100, "unit": "kg", "image": "./fruits/pear.png", "rating": 4.3, "description": "Crisp organic pears, great for digestion.", "stock": 30 },
+    { "id": "f11", "name": "Pineapple", "category": "fruits", "price": 70, "unit": "piece", "image": "./fruits/pineapple.png", "rating": 4.5, "description": "Tropical pineapples loaded with bromelain enzyme.", "stock": 20 },
+    { "id": "f12", "name": "Strawberry", "category": "fruits", "price": 250, "unit": "kg", "image": "./fruits/strawberry.png", "rating": 4.9, "description": "Fresh strawberries from hill farms, no artificial color.", "stock": 15 },
+    { "id": "f13", "name": "Watermelon", "category": "fruits", "price": 25, "unit": "kg", "image": "./fruits/watermelon.png", "rating": 4.6, "description": "Sweet hydrating watermelons, 92% water content.", "stock": 50 }
+  ],
+  "vegetables": [
+    { "id": "v1", "name": "Cabbage", "category": "vegetables", "price": 25, "unit": "kg", "image": "./vegge/cabbage.png", "rating": 4.2, "description": "Farm-fresh cabbage, rich in vitamin K and C.", "stock": 60 },
+    { "id": "v2", "name": "Carrot", "category": "vegetables", "price": 40, "unit": "kg", "image": "./vegge/carrot.png", "rating": 4.5, "description": "Crunchy orange carrots, excellent source of beta-carotene.", "stock": 80 },
+    { "id": "v3", "name": "Tomato", "category": "vegetables", "price": 30, "unit": "kg", "image": "./vegge/tomato.png", "rating": 4.3, "description": "Vine-ripened tomatoes, rich in lycopene antioxidants.", "stock": 100 },
+    { "id": "v4", "name": "Spinach", "category": "vegetables", "price": 20, "unit": "bunch", "image": "./vegge/spinach.png", "rating": 4.6, "description": "Iron-rich spinach leaves, organically grown.", "stock": 40 },
+    { "id": "v5", "name": "Broccoli", "category": "vegetables", "price": 80, "unit": "kg", "image": "./vegge/broccoli.png", "rating": 4.7, "description": "Cancer-fighting broccoli with high vitamin C content.", "stock": 25 },
+    { "id": "v6", "name": "Cauliflower", "category": "vegetables", "price": 35, "unit": "piece", "image": "./vegge/cauliflower.png", "rating": 4.1, "description": "White cauliflower, great source of choline and folate.", "stock": 30 },
+    { "id": "v7", "name": "Cucumber", "category": "vegetables", "price": 20, "unit": "kg", "image": "./vegge/cucumber.png", "rating": 4.0, "description": "Hydrating cucumbers, perfect for summer salads.", "stock": 70 },
+    { "id": "v8", "name": "Potato", "category": "vegetables", "price": 25, "unit": "kg", "image": "./vegge/potato.png", "rating": 4.2, "description": "Fresh potatoes, versatile for all your cooking needs.", "stock": 200 }
+  ],
+  "honey": [
+    { "id": "h1", "name": "Alfalfa Honey", "category": "honey", "price": 350, "unit": "500g", "image": "./honey/alfalfa.jpg", "rating": 4.8, "description": "Light, mild honey from alfalfa flowers, excellent for baking.", "stock": 30 },
+    { "id": "h2", "name": "Acacia Honey", "category": "honey", "price": 420, "unit": "500g", "image": "./honey/acacia.jpg", "rating": 4.9, "description": "Golden acacia honey, pure and naturally crystallized.", "stock": 20 },
+    { "id": "h3", "name": "Wild Honey", "category": "honey", "price": 500, "unit": "500g", "image": "./honey/wild.jpg", "rating": 4.7, "description": "Raw wild forest honey, collected from Nilgiri hills.", "stock": 15 },
+    { "id": "h4", "name": "Manuka Honey", "category": "honey", "price": 1200, "unit": "250g", "image": "./honey/manuka.jpg", "rating": 5.0, "description": "Premium New Zealand Manuka honey with powerful antibacterial properties.", "stock": 10 }
+  ],
+  "milk": [
+    { "id": "m1", "name": "Paneer", "category": "milk", "price": 120, "unit": "250g", "image": "./milk/paneer.png", "rating": 4.6, "description": "Fresh homemade paneer from A2 cow milk.", "stock": 40 },
+    { "id": "m2", "name": "Cheese", "category": "milk", "price": 200, "unit": "200g", "image": "./milk/cheese.webp", "rating": 4.5, "description": "Artisanal organic cheese, no artificial preservatives.", "stock": 25 },
+    { "id": "m3", "name": "Ghee", "category": "milk", "price": 600, "unit": "500ml", "image": "./milk/ghee.png", "rating": 4.9, "description": "Pure A2 cow ghee, bilona churned the traditional way.", "stock": 30 },
+    { "id": "m4", "name": "Curd", "category": "milk", "price": 40, "unit": "500g", "image": "./milk/curd.png", "rating": 4.3, "description": "Thick creamy curd set daily with organic milk.", "stock": 60 },
+    { "id": "m5", "name": "Butter", "category": "milk", "price": 150, "unit": "200g", "image": "./milk/butter.png", "rating": 4.4, "description": "Unsalted white butter from organic grass-fed cows.", "stock": 35 }
+  ],
+  "spices": [
+    { "id": "s1", "name": "Turmeric Powder", "category": "spices", "price": 80, "unit": "200g", "image": "./spice/turmeric.png", "rating": 4.7, "description": "Golden organic turmeric with high curcumin content.", "stock": 100 },
+    { "id": "s2", "name": "Red Chilli Powder", "category": "spices", "price": 60, "unit": "200g", "image": "./spice/chilli.png", "rating": 4.5, "description": "Hot Kashmiri red chilli powder, vibrant color and aroma.", "stock": 80 },
+    { "id": "s3", "name": "Cinnamon", "category": "spices", "price": 120, "unit": "100g", "image": "./spice/cinnamon.png", "rating": 4.8, "description": "Ceylon cinnamon sticks, helps regulate blood sugar.", "stock": 50 },
+    { "id": "s4", "name": "Cardamom", "category": "spices", "price": 300, "unit": "100g", "image": "./spice/cardamom.png", "rating": 4.9, "description": "Green Coorg cardamom, the queen of spices.", "stock": 30 },
+    { "id": "s5", "name": "Cumin Seeds", "category": "spices", "price": 70, "unit": "200g", "image": "./spice/cumin.png", "rating": 4.4, "description": "Aromatic cumin seeds, aids digestion and weight loss.", "stock": 70 }
+  ],
+  "sauce": [
+    { "id": "sc1", "name": "Tomato Ketchup", "category": "sauce", "price": 90, "unit": "500g", "image": "./sauce/ketchup.png", "rating": 4.3, "description": "No-sugar-added organic tomato ketchup.", "stock": 60 },
+    { "id": "sc2", "name": "Green Chilli Sauce", "category": "sauce", "price": 70, "unit": "300ml", "image": "./sauce/greenchilli.png", "rating": 4.2, "description": "Tangy green chilli sauce made with fresh chillis.", "stock": 40 },
+    { "id": "sc3", "name": "Tamarind Sauce", "category": "sauce", "price": 80, "unit": "300ml", "image": "./sauce/tamarind.png", "rating": 4.5, "description": "Sweet and sour tamarind chutney, no preservatives.", "stock": 35 }
+  ],
+  "juice": [
+    { "id": "j1", "name": "Mango Juice", "category": "juice", "price": 60, "unit": "500ml", "image": "./freash juice/mango.png", "rating": 4.7, "description": "100% pure mango pulp juice, no added sugar.", "stock": 50 },
+    { "id": "j2", "name": "Orange Juice", "category": "juice", "price": 50, "unit": "500ml", "image": "./freash juice/orange.png", "rating": 4.5, "description": "Cold-pressed orange juice, rich in vitamin C.", "stock": 45 },
+    { "id": "j3", "name": "Mixed Fruit Juice", "category": "juice", "price": 80, "unit": "500ml", "image": "./freash juice/mixed.png", "rating": 4.6, "description": "Blend of seasonal organic fruits, no concentrates.", "stock": 30 }
+  ],
+  "fertilizer": [
+    { "id": "fe1", "name": "Vermicompost", "category": "fertilizer", "price": 150, "unit": "5kg", "image": "./manure/vermicompost.png", "rating": 4.8, "description": "Premium worm castings for excellent soil health.", "stock": 80 },
+    { "id": "fe2", "name": "Cow Dung Manure", "category": "fertilizer", "price": 100, "unit": "5kg", "image": "./manure/cowdung.png", "rating": 4.5, "description": "Aged organic cow dung, enriches soil with nutrients.", "stock": 100 },
+    { "id": "fe3", "name": "Neem Cake", "category": "fertilizer", "price": 120, "unit": "2kg", "image": "./manure/neemcake.png", "rating": 4.6, "description": "Neem cake fertilizer — natural pest repellent.", "stock": 60 }
+  ]
+}
