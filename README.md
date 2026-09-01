@@ -103,7 +103,7 @@ The console will log the server address:
 ║   The Organic Evolution               ║
 ╚═══════════════════════════════════════╝
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in any modern web browser to explore.
+Open **[https://darkmatri.github.io/Pasugarram-2/](Pasugarram.com)** in any modern web browser to explore.
 
 ---
 
