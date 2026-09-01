@@ -103,7 +103,7 @@ The console will log the server address:
 ║   The Organic Evolution               ║
 ╚═══════════════════════════════════════╝
 ```
-Open **[https://darkmatri.github.io/Pasugarram-2/](Pasugarram.com)** in any modern web browser to explore.
+Open **[Pasugarram.com](https://darkmatri.github.io/Pasugarram-2/)** in any modern web browser to explore.
 
 ---
 
