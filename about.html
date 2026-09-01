@@ -5,137 +5,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Pasugaaram</title>
+    <title>About Us — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
-<body>
+<body class="app-body">
+    <div class="app-layout">
 
-    <!-- Sticky Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <a href="#"><img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-                <div class="logo-text">
-                    <h1>Pasugaaram</h1>
-                    <span>Organic Evolution</span>
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house-chimney nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#categories-section" class="nav-link">
+                            <i class="fa-solid fa-shapes nav-icon"></i>
+                            <span class="nav-text">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#products-section" class="nav-link">
+                            <i class="fa-solid fa-box-archive nav-icon"></i>
+                            <span class="nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fa-solid fa-receipt nav-icon"></i>
+                            <span class="nav-text">Orders & Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">
+                            <i class="fa-solid fa-leaf nav-icon"></i>
+                            <span class="nav-text">About Us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link">
+                            <i class="fa-regular fa-circle-question nav-icon"></i>
+                            <span class="nav-text">Help & Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
                 </div>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
-                <li><a href="about.html" class="active"><i class="fa-solid fa-message"></i> <span
-                            class="nav-item">About</span></a></li>
-                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="breadcrumb-container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>About Us</li>
-        </ul>
-    </div>
-
-    <!-- About Content Section -->
-    <section class="section-title-wrapper">
-        <h2 class="section-title">Our Story & Founders</h2>
-        <p class="section-subtitle">Dedicated to bringing genuine chemical-free nutrients directly from our farms to
-            your family tables.</p>
-    </section>
-
-    <!-- Team Cards Grid -->
-    <div class="team-container">
-        <div class="team-card">
-            <img src="./images/abt1.png" alt="Roy Bahadur" class="team-img">
-            <h3 class="team-name">Roy Bahadur</h3>
-            <div class="team-role">Founder & Agriculturalist</div>
-            <p class="team-bio">Passionate organic farming innovator with over 15 years of soil preservation research
-                experience. Roy believes in restoring earth's vitality.</p>
-        </div>
-        <div class="team-card">
-            <img src="./images/abt1.png" alt="Robin Claymold" class="team-img">
-            <h3 class="team-name">Robin Claymold</h3>
-            <div class="team-role">Co-Founder & Logistics</div>
-            <p class="team-bio">Supply chain expert ensuring the farm-to-table transition happens within hours,
-                preserving enzymes and absolute freshness.</p>
-        </div>
-        <div class="team-card">
-            <img src="./images/abt1.png" alt="Shyam Singam" class="team-img">
-            <h3 class="team-name">Shyam Singam</h3>
-            <div class="team-role">Co-Founder & Quality Assur.</div>
-            <p class="team-bio">Chemist turned organic advocate. Shyam tests all incoming partner harvest products for
-                chemical additives and purity levels.</p>
-        </div>
-    </div>
-
-    <!-- Company and Farm Rows -->
-    <div class="about-grid">
-        <div class="about-row">
-            <div class="about-col-img">
-                <img src="./images/company1.jpg" alt="Company office" onerror="this.src='./images/bg.jpg'">
-            </div>
-            <div class="about-col-content">
-                <h2>Our Vision</h2>
-                <p>We envision a community where healthy living and sustainable agriculture thrive together. Driven by
-                    high standards of purity, we empower farmers by giving them a fair market and give consumers pure
-                    food they can trust.</p>
-                <p>By using biological fertilizers and crop protection schemes, we safeguard the local environment and
-                    water ecosystems from heavy chemical runoff.</p>
-            </div>
-        </div>
-
-        <div class="about-row">
-            <div class="about-col-img">
-                <img src="./images/company2.jpg" alt="Farming Land" onerror="this.src='./images/bg3.jpg'">
-            </div>
-            <div class="about-col-content">
-                <h2>Farming Land & Purity</h2>
-                <p>Our network of partner farms stretches across organic preserves. Every square foot is nurtured with
-                    organic manure, preventing degradation and encouraging micro-bacterial activity.</p>
-                <p>Regular crop rotations, combined with clean drip irrigation systems, help save up to 40% more water
-                    compared to traditional methods while keeping the soil fertile year-round.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <img src="./images/logonew.png" alt="Footer Logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
+                <div class="promo-image-wrapper">
+                    <img src="./images/hero_main.jpg" alt="Organic produce" class="promo-thumb-img">
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+        </aside>
 
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Search groceries..."
+                        autocomplete="off">
+                </div>
+
+                <div class="header-actions">
+                    <div class="location-badge">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city">Chennai, 600001</span>
+                        </div>
+                    </div>
+                    <button class="header-icon-btn" id="headerCartBtn" aria-label="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count badge-gold" id="cartCountBadge">3</span>
+                    </button>
+                    <a href="profile.html" class="user-avatar-btn">
+                        <span class="avatar-initial">Kg</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>About Us</li>
+                </ul>
+
+                <div class="page-title-banner">
+                    <h2>The Organic Evolution</h2>
+                    <p>Founded in 2018, Pasugarram bridges ethical organic farmers directly to urban households with
+                        zero intermediaries.</p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="about-features-grid">
+                    <div class="about-feature-card">
+                        <i class="fa-solid fa-seedling about-feature-icon"></i>
+                        <h3 class="about-feature-title">100% Certified Organic</h3>
+                        <p class="about-feature-desc">All produce is cultivated using natural compost and neem extracts
+                            with zero chemical pesticides.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <i class="fa-solid fa-cow about-feature-icon"></i>
+                        <h3 class="about-feature-title">Pure Native A2 Dairy</h3>
+                        <p class="about-feature-desc">Sourced from grass-fed indigenous cows. Non-homogenized,
+                            antibiotic-free raw milk and churned ghee.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <i class="fa-solid fa-truck-fast about-feature-icon"></i>
+                        <h3 class="about-feature-title">Morning 6 AM Harvest Delivery</h3>
+                        <p class="about-feature-desc">Harvested fresh before dawn and delivered directly to your kitchen
+                            counter within hours.</p>
+                    </div>
+                </div>
+
+                <!-- Story Section -->
+                <div
+                    style="background-color: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 32px; line-height: 1.8; color: var(--text-muted);">
+                    <h3 style="color: var(--gold-primary); font-size: 20px; margin-bottom: 12px;">Our Journey &
+                        Philosophy</h3>
+                    <p style="margin-bottom: 14px;">
+                        Pasugarram was founded with a single mission: to make pure, chemical-free food accessible,
+                        affordable, and transparent for every family. Modern agriculture has depleted soils with
+                        synthetic fertilizers. We empower smallholder regenerative farmers across Tamil Nadu, Karnataka,
+                        and Kerala who restore soil fertility naturally.
+                    </p>
+                    <p>
+                        From native heirloom tomatoes to wild forest honey from Nilgiri tribes, every product you
+                        receive directly supports fair livelihood for local farm families.
+                    </p>
+                </div>
+
+                <!-- Footer -->
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group">
+                <i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3>
+                <span class="drawer-badge" id="drawerItemCount">3 items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span class="subtotal-label">Subtotal</span>
+                <span class="subtotal-amount" id="drawerSubtotal">₹240</span>
+            </div>
+            <div class="cart-drawer-buttons">
+                <a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="toast-container" id="toastContainer"></div>
     <script src="script.js"></script>
 </body>
 

@@ -1,104 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organic Fertilizers — Pasugaaram</title>
+    <title>Organic Manure & Bio-Fertilizers — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body data-category="fertilizer">
 
-    <!-- Sticky Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-            <div class="logo-text">
-                <h1>Pasugaaram</h1>
-                <span>Organic Evolution</span>
+<body class="app-body">
+    <div class="app-layout">
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar"><i
+                        class="fa-solid fa-xmark"></i></button>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
-                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a></li>
-                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="breadcrumb-container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Categories</li>
-            <li>Organic Fertilizers</li>
-        </ul>
-    </div>
-
-    <!-- Section Title -->
-    <section class="section-title-wrapper">
-        <h2 class="section-title">Organic Manures & Fertilizers</h2>
-        <p class="section-subtitle">Bio-composts and natural manure amendments designed to enrich soil structures and micro-organism counts.</p>
-    </section>
-
-    <!-- Search and Filters -->
-    <div class="filter-search-container">
-        <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" id="product-search" placeholder="Search vermicompost, neem cake...">
-        </div>
-        <div class="filter-options">
-            <select id="product-sort" class="filter-select">
-                <option value="">Sort By default</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Rating: High to Low</option>
-            </select>
-        </div>
-    </div>
-
-    <!-- Products Grid -->
-    <div class="product-grid" id="products-grid">
-        <!-- Rendered dynamically by script.js -->
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-                <img src="./images/logonew.png" alt="Footer Logo">
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i
+                                class="fa-solid fa-house-chimney nav-icon"></i><span class="nav-text">Home</span></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#categories-section" class="nav-link active"><i
+                                class="fa-solid fa-shapes nav-icon"></i><span class="nav-text">Categories</span></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#products-section" class="nav-link"><i
+                                class="fa-solid fa-box-archive nav-icon"></i><span class="nav-text">Products</span></a>
+                    </li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link"><i
+                                class="fa-solid fa-receipt nav-icon"></i><span class="nav-text">Orders & Cart</span></a>
+                    </li>
+                    <li class="nav-item"><a href="profile.html" class="nav-link"><i
+                                class="fa-regular fa-user nav-icon"></i><span class="nav-text">Account</span></a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link"><i
+                                class="fa-regular fa-circle-question nav-icon"></i><span class="nav-text">Help &
+                                Support</span></a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Get App</h3>
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
+            </nav>
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
                 </div>
+                <div class="promo-image-wrapper"><img src="./images/hero_main.jpg" alt="Organic produce"
+                        class="promo-thumb-img"></div>
+            </div>
+        </aside>
+
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input"
+                        placeholder="Search organic manures..." autocomplete="off">
+                </div>
+                <div class="header-actions">
+                    <div class="location-badge">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city">Chennai, 600001</span>
+                        </div>
+                    </div>
+                    <button class="header-icon-btn" id="headerCartBtn"><i class="fa-solid fa-cart-shopping"></i><span
+                            class="badge-count badge-gold" id="cartCountBadge">3</span></button>
+                    <a href="profile.html" class="user-avatar-btn"><span class="avatar-initial">Kg</span></a>
+                </div>
+            </header>
+
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="index.html#categories-section">Categories</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Organic Manure & Soil Care</li>
+                </ul>
+
+                <div class="page-title-banner">
+                    <h2>Regenerative Farm Compost & Soil Care</h2>
+                    <p>Enrich your home garden or farm naturally. Vermicompost, aged cow dung manure, and cold-pressed
+                        neem cake.</p>
+                </div>
+
+                <div class="products-grid-container">
+                    <div class="product-item-card" data-category="fertilizer">
+                        <div class="product-thumb-wrapper">
+                            <img src="./images/manure2.png" alt="Pure Vermicompost" class="product-img">
+                            <div class="product-rating-pill"><i class="fa-solid fa-star star-icon"></i> 4.9</div>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-title">Enriched Earthworm Vermicompost</h4>
+                            <span class="product-unit">5kg Bag</span>
+                            <div class="product-footer-row">
+                                <div class="product-price"><span class="currency">₹</span>150</div>
+                                <button class="add-cart-btn"
+                                    onclick="addToCartItem('fe_vermi', 'Enriched Earthworm Vermicompost', 150, '5kg', './images/manure2.png')"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item-card" data-category="fertilizer">
+                        <div class="product-thumb-wrapper">
+                            <img src="./images/manure.jpg" alt="Aged Cow Dung Manure" class="product-img">
+                            <div class="product-rating-pill"><i class="fa-solid fa-star star-icon"></i> 4.8</div>
+                        </div>
+                        <div class="product-details">
+                            <h4 class="product-title">Native Desi Cow Dung Manure</h4>
+                            <span class="product-unit">5kg Bag</span>
+                            <div class="product-footer-row">
+                                <div class="product-price"><span class="currency">₹</span>100</div>
+                                <button class="add-cart-btn"
+                                    onclick="addToCartItem('fe_cowdung', 'Native Desi Cow Dung Manure', 100, '5kg', './images/manure.jpg')"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group"><i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3><span class="drawer-badge" id="drawerItemCount">3
+                    items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row"><span class="subtotal-label">Subtotal</span><span class="subtotal-amount"
+                    id="drawerSubtotal">₹240</span></div>
+            <div class="cart-drawer-buttons"><a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+    </aside>
 
+    <div class="toast-container" id="toastContainer"></div>
     <script src="script.js"></script>
 </body>
+
 </html>

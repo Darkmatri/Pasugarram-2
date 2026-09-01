@@ -1,135 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions — Pasugaaram</title>
+    <title>Help & FAQ — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body>
 
-    <!-- Sticky Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-            <div class="logo-text">
-                <h1>Pasugaaram</h1>
-                <span>Organic Evolution</span>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
-                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a></li>
-                <li><a href="faq.html" class="active"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="app-body">
+    <div class="app-layout">
 
-    <div class="breadcrumb-container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>FAQ</li>
-        </ul>
-    </div>
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
 
-    <!-- Section Title -->
-    <section class="section-title-wrapper">
-        <h2 class="section-title">Help & FAQs</h2>
-        <p class="section-subtitle">Find answers to commonly asked questions about organic standards, delivery, and orders.</p>
-    </section>
-
-    <!-- FAQ Accordion List -->
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Are all Pasugaaram products certified organic?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, all agricultural products are sourced from farms holding organic certification. We audit partner lands regularly to ensure zero chemical pesticides or artificial fertilizers are used.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>How fast is the farm-to-table delivery?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>We guarantee delivery within 24 to 48 hours from harvest. Fresh leafy vegetables and raw juices are cold-stored during transport to keep their original nutrients intact.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Do you support cashless online payments?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Currently, our platform supports Cash on Delivery (COD) and direct UPI integration upon delivery. Online gateway processing will be rolled out in our next phase update.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>How can I track my placed orders?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Once you are logged in, navigate to your Profile page. You will see a detailed history of your past orders, along with their confirmation status and estimated delivery dates.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What is the shelf life of raw wild honey?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Pure unprocessed honey never spoils! Since we do not add preservatives or pasteurize it, natural crystallization may occur over time. Simply place the jar in warm water to reliquefy it.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-                <img src="./images/logonew.png" alt="Footer Logo">
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house-chimney nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#categories-section" class="nav-link">
+                            <i class="fa-solid fa-shapes nav-icon"></i>
+                            <span class="nav-text">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#products-section" class="nav-link">
+                            <i class="fa-solid fa-box-archive nav-icon"></i>
+                            <span class="nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fa-solid fa-receipt nav-icon"></i>
+                            <span class="nav-text">Orders & Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <i class="fa-solid fa-leaf nav-icon"></i>
+                            <span class="nav-text">About Us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link active">
+                            <i class="fa-regular fa-circle-question nav-icon"></i>
+                            <span class="nav-text">Help & Support</span>
+                        </a>
+                    </li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Get App</h3>
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
+            </nav>
+
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
+                </div>
+                <div class="promo-image-wrapper">
+                    <img src="./images/hero_main.jpg" alt="Organic produce" class="promo-thumb-img">
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+        </aside>
 
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Search questions..."
+                        autocomplete="off">
+                </div>
+
+                <div class="header-actions">
+                    <div class="location-badge">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city">Chennai, 600001</span>
+                        </div>
+                    </div>
+                    <button class="header-icon-btn" id="headerCartBtn" aria-label="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count badge-gold" id="cartCountBadge">3</span>
+                    </button>
+                    <a href="profile.html" class="user-avatar-btn">
+                        <span class="avatar-initial">Kg</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Frequently Asked Questions</li>
+                </ul>
+
+                <div class="page-title-banner">
+                    <h2>Help & Frequently Asked Questions</h2>
+                    <p>Everything you need to know about our organic certification, farm delivery cycles, and
+                        subscriptions.</p>
+                </div>
+
+                <div class="faq-accordion-group">
+                    <div class="faq-card-item open" onclick="toggleFaq(this)">
+                        <div class="faq-card-question">
+                            <span>How do you guarantee that vegetables and fruits are 100% pesticide-free?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            We partner exclusively with NPOP and PGS-India certified farms. Soil and crop samples
+                            undergo regular lab testing for multi-residue pesticides. We also provide full farm
+                            traceability for every batch.
+                        </div>
+                    </div>
+
+                    <div class="faq-card-item" onclick="toggleFaq(this)">
+                        <div class="faq-card-question">
+                            <span>When is the delivery slot and how early does milk arrive?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            Our primary morning harvest delivery occurs between 6:00 AM and 8:30 AM every morning. Milk
+                            is bottled the previous evening, chilled naturally, and delivered at your doorstep before
+                            your morning tea.
+                        </div>
+                    </div>
+
+                    <div class="faq-card-item" onclick="toggleFaq(this)">
+                        <div class="faq-card-question">
+                            <span>What is your cancellation and return policy?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            If any vegetable, fruit, or dairy item does not meet your quality expectations, you can
+                            request an instant 100% refund or replacement within 24 hours directly from your profile
+                            dashboard with no questions asked.
+                        </div>
+                    </div>
+
+                    <div class="faq-card-item" onclick="toggleFaq(this)">
+                        <div class="faq-card-question">
+                            <span>How do subscriptions for A2 Cow Milk work?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-card-answer">
+                            You can set recurring daily or alternate-day milk subscriptions. You can pause or modify
+                            quantities anytime up until 9:00 PM the previous evening.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Card -->
+                <div
+                    style="margin-top: 24px; background: linear-gradient(135deg, #10281e 0%, #0c2018 100%); border: 1px solid var(--border-active); border-radius: var(--radius-lg); padding: 28px; display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--gold-primary); font-size: 18px; margin-bottom: 4px;">Need Immediate
+                            Assistance?</h3>
+                        <p style="color: var(--text-muted); font-size: 13px;">Our farm support team is available
+                            everyday from 6 AM to 9 PM.</p>
+                    </div>
+                    <a href="mailto:support@pasugaaram.in" class="btn-shop-gold" style="white-space: nowrap;">
+                        <i class="fa-solid fa-envelope"></i> Contact Farm Support
+                    </a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group">
+                <i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3>
+                <span class="drawer-badge" id="drawerItemCount">3 items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span class="subtotal-label">Subtotal</span>
+                <span class="subtotal-amount" id="drawerSubtotal">₹240</span>
+            </div>
+            <div class="cart-drawer-buttons">
+                <a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="toast-container" id="toastContainer"></div>
     <script src="script.js"></script>
+    <script>
+        function toggleFaq(card) {
+            card.classList.toggle('open');
+        }
+    </script>
 </body>
+
 </html>

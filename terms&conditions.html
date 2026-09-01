@@ -5,125 +5,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>terms & conditions</title>
+    <title>Terms & Conditions — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="terms">
-        <span>
-            <h1>Terms and Conditions</h1>
-            <h2>* Introduction</h2>
-            <ul>
-                <li>
-                    These Website Standard Terms and Conditions written on this webpage shall manage your use of our website,
-                    Webiste Name accessible at Website.com.
-                </li>
-                <li>
-                    These Terms will be applied fully and affect to your use of this Website. By using this Website, you
-                    agreed to accept all terms and conditions written in here. You must not use this Website if you disagree
-                    with any of these Website Standard Terms and Conditions.
-                </li>
-                <li>
-                    Minors or people below 18 years old are not allowed to use this Website.
-                </li>
-            </ul>
+<body class="app-body">
+    <div class="app-layout">
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i
+                                class="fa-solid fa-house-chimney nav-icon"></i><span class="nav-text">Home</span></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#categories-section" class="nav-link"><i
+                                class="fa-solid fa-shapes nav-icon"></i><span class="nav-text">Categories</span></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#products-section" class="nav-link"><i
+                                class="fa-solid fa-box-archive nav-icon"></i><span class="nav-text">Products</span></a>
+                    </li>
+                    <li class="nav-item"><a href="cart.html" class="nav-link"><i
+                                class="fa-solid fa-receipt nav-icon"></i><span class="nav-text">Orders & Cart</span></a>
+                    </li>
+                    <li class="nav-item"><a href="profile.html" class="nav-link"><i
+                                class="fa-regular fa-user nav-icon"></i><span class="nav-text">Account</span></a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link"><i
+                                class="fa-regular fa-circle-question nav-icon"></i><span class="nav-text">Help &
+                                Support</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
+                </div>
+                <div class="promo-image-wrapper"><img src="./images/hero_main.jpg" alt="Organic produce"
+                        class="promo-thumb-img"></div>
+            </div>
+        </aside>
 
-            <h2>* Intellectual Property Rights</h2>
-            <ul>
-                <li>Other than the content you own, under these Terms, Company Name and/or its licensors own all the
-                    intellectual property rights and materials contained in this Website.
-                </li>
-                <li>
-                    You are granted limited license only for purposes of viewing the material contained on this Website.
-                </li>
-            </ul>
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-            <h2>* Restrictions</h2>
-            <ul>
-                <li>You are specifically restricted from all of the following:</li>
-                <li>publishing any Website material in any other media;</li>
-                <li>selling, sublicensing and/or otherwise commercializing any Website material;</li>
-                <li>publicly performing and/or showing any Website material;</li>
-                <li>using this Website in any way that is or may be damaging to this Website;</li>
-                <li>using this Website in any way that impacts user access to this Website;</li>
-                <li>
-                    using this Website contrary to applicable laws and regulations, or in any way may cause harm to the
-                    Website, or to any person or business entity;
-                </li>
-                <li>
-                    engaging in any data mining, data harvesting, data extracting or any other similar activity in
-                    relation to this Website;
-                </li>
-                <li>using this Website to engage in any advertising or marketing.</li>
-                <p>
-                    Certain areas of this Website are restricted from being access by you and Company Name may further
-                    restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID
-                    and password you may have for this Website are confidential and you must maintain confidentiality as
-                    well.
-                </p>
-            </ul>
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Search terms..."
+                        autocomplete="off">
+                </div>
+                <div class="header-actions">
+                    <button class="header-icon-btn" id="headerCartBtn"><i class="fa-solid fa-cart-shopping"></i><span
+                            class="badge-count badge-gold" id="cartCountBadge">3</span></button>
+                    <a href="profile.html" class="user-avatar-btn"><span class="avatar-initial">Kg</span></a>
+                </div>
+            </header>
 
-            <h2>* Your Content</h2>
-            <p>In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or
-                other material you choose to display on this Website. By displaying Your Content, you grant Company Name a
-                non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate
-                and distribute it in any and all media.
-            </p>
-            <p>Your Content must be your own and must not be invading any third-party's rights. Company Name reserves the
-                right to remove any of Your Content from this Website at any time without notice.
-            </p>
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Terms and Conditions</li>
+                </ul>
 
-            <h2>* No warranties</h2>
-            <p>This Website is provided “as is,” with all faults, and Company Name express no representations or
-                warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing
-                contained on this Website shall be interpreted as advising you.
-            </p>
+                <div class="page-title-banner">
+                    <h2>Terms & Conditions of Service</h2>
+                    <p>Understanding delivery slots, returns, quality guarantees, and subscription terms.</p>
+                </div>
 
-            <h2>* Limitation of liability</h2>
-            <p>In no event shall Company Name, nor any of its officers, directors and employees, shall be held liable for
-                anything arising out of or in any way connected with your use of this Website whether such liability is
-                under contract. Company Name, including its officers, directors and employees shall not be held liable for
-                any indirect, consequential or special liability arising out of or in any way related to your use of this
-                Website.
-            </p>
+                <div
+                    style="background-color: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 32px; line-height: 1.8; color: var(--text-muted);">
+                    <h3 style="color: var(--gold-primary); font-size: 18px; margin-bottom: 8px;">1. Freshness Guarantee
+                        & Inspection</h3>
+                    <p style="margin-bottom: 18px;">All organic items are harvested prior to dispatch. If you notice any
+                        damage or quality variance upon doorstep delivery, you can request an instant 100% refund or
+                        free replacement within 24 hours.</p>
 
-            <h2>* Indemnification</h2>
-            <p>You hereby indemnify to the fullest extent Company Name from and against any and/or all liabilities, costs,
-                demands, causes of action, damages and expenses arising in any way related to your breach of any of the
-                provisions of these Terms.
-            </p>
+                    <h3 style="color: var(--gold-primary); font-size: 18px; margin-bottom: 8px;">2. Morning Harvest
+                        Delivery</h3>
+                    <p style="margin-bottom: 18px;">Deliveries occur between 6:00 AM and 8:30 AM. Customers may choose
+                        doorstep delivery or unattended milk drops at designated apartment milk boxes.</p>
 
-            <h2>* Severability</h2>
-            <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be
-                deleted without affecting the remaining provisions herein.
-            </p>
-            
-            <h2>* Variation of Terms</h2>
-            <p>Company Name is permitted to revise these Terms at any time as it sees fit, and by using this Website you
-                are expected to review these Terms on a regular basis.
-            </p>
+                    <h3 style="color: var(--gold-primary); font-size: 18px; margin-bottom: 8px;">3. Organic
+                        Certification Standards</h3>
+                    <p>All partner farms operate in strict accordance with the National Programme for Organic Production
+                        (NPOP) and Participatory Guarantee System for India (PGS-India).</p>
+                </div>
 
-            <h2>* Assignment</h2>
-            <p>The Company Name is allowed to assign, transfer, and subcontract its rights and/or obligations under these
-                Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your
-                rights and/or obligations under these Terms.
-            </p>
-
-            <h2>* Entire Agreement</h2>
-            <p>These Terms constitute the entire agreement between Company Name and you in relation to your use of this
-                Website, and supersede all prior agreements and understandings.
-            </p>
-
-            <h2>* Governing Law & Jurisdiction</h2>
-            <p>These Terms will be governed by and interpreted in accordance with the laws of the State of Country, and you
-                submit to the non-exclusive jurisdiction of the state and federal courts located in Country for the
-                resolution of any disputes.
-            </p>  
-        </span>
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
     </div>
-    <input type="checkbox" name="checkbox" id="check"> I Accept, the terms & conditions
-    <button type="submit" id="term_btn">Submit</button>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group"><i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3><span class="drawer-badge" id="drawerItemCount">3
+                    items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row"><span class="subtotal-label">Subtotal</span><span class="subtotal-amount"
+                    id="drawerSubtotal">₹240</span></div>
+            <div class="cart-drawer-buttons"><a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -5,187 +5,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register — Pasugaaram</title>
+    <title>Sign In / Register — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
-<body>
-
-
-    <div class="auth-wrapper">
-        <div class="auth-card">
-            <div class="auth-tabs">
-                <div class="auth-tab active" id="login-tab" onclick="switchTab('login')">Log In</div>
-                <div class="auth-tab" id="register-tab" onclick="switchTab('register')">Register</div>
+<body class="app-body">
+    <div class="auth-page-wrapper">
+        <div class="auth-card-panel">
+            <div class="auth-header">
+                <a href="index.html" style="text-decoration: none;">
+                    <h1 class="auth-logo-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
             </div>
 
-            <!-- Login Form -->
-            <form id="login-form-element" class="auth-form active">
-                <div class="form-group">
-                    <label for="login-email">Email Address</label>
-                    <input type="email" id="login-email" class="form-input" placeholder="Enter your email" required>
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" id="tabSignIn" onclick="switchAuthTab('signin')">Sign In</button>
+                <button class="auth-tab-btn" id="tabSignUp" onclick="switchAuthTab('signup')">Create Account</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <form id="signInForm" onsubmit="handleAuthSubmit(event, 'signin')">
+                <div class="form-field-group" style="margin-bottom: 14px;">
+                    <label>Email or Mobile Number</label>
+                    <input type="text" required class="form-field-input" placeholder="e.g. kannan@example.com">
                 </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+                <div class="form-field-group" style="margin-bottom: 14px;">
+                    <label>Password</label>
+                    <input type="password" required class="form-field-input" placeholder="••••••••">
                 </div>
-                <div class="form-row">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="remember-me"> Remember me
-                    </label>
-                    <a href="#" style="color: var(--primary); text-decoration: none;">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">Sign In</button>
+                <button type="submit" class="btn-auth-submit">Sign In to Pasugarram</button>
             </form>
 
-            <!-- Register Form -->
-            <form id="register-form-element" class="auth-form">
-                <div class="form-group">
-                    <label for="register-name">Full Name</label>
-                    <input type="text" id="register-name" class="form-input" placeholder="e.g. John Doe" required>
+            <!-- Sign Up Form -->
+            <form id="signUpForm" style="display: none;" onsubmit="handleAuthSubmit(event, 'signup')">
+                <div class="form-field-group" style="margin-bottom: 12px;">
+                    <label>Full Name</label>
+                    <input type="text" required class="form-field-input" placeholder="e.g. Kannan G">
                 </div>
-                <div class="form-group">
-                    <label for="register-email">Email Address</label>
-                    <input type="email" id="register-email" class="form-input" placeholder="john@example.com" required>
+                <div class="form-field-group" style="margin-bottom: 12px;">
+                    <label>Mobile Number</label>
+                    <input type="tel" required class="form-field-input" placeholder="+91 98765 43210">
                 </div>
-                <div class="form-group">
-                    <label for="register-phone">Phone Number</label>
-                    <input type="tel" id="register-phone" class="form-input" placeholder="+91 98765 43210">
+                <div class="form-field-group" style="margin-bottom: 12px;">
+                    <label>Email Address</label>
+                    <input type="email" required class="form-field-input" placeholder="you@example.com">
                 </div>
-                <div class="form-group">
-                    <label for="register-password">Password</label>
-                    <input type="password" id="register-password" class="form-input" placeholder="Min 6 characters"
-                        required>
+                <div class="form-field-group" style="margin-bottom: 14px;">
+                    <label>Create Password</label>
+                    <input type="password" required class="form-field-input" placeholder="At least 6 characters">
                 </div>
-                <div class="form-row">
-                    <label class="checkbox-label">
-                        <input type="checkbox" required> I agree to the <a href="terms&conditions.html"
-                            style="color: var(--primary);">terms & conditions</a>
-                    </label>
-                </div>
-                <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">Create
-                    Account</button>
+                <button type="submit" class="btn-auth-submit">Create My Account</button>
             </form>
+
+            <div style="text-align: center; margin-top: 20px; font-size: 12px; color: var(--text-sub);">
+                By continuing, you agree to Pasugarram's <a href="terms&conditions.html" style="color: var(--gold-primary);">Terms of Service</a> & <a href="policy.html" style="color: var(--gold-primary);">Privacy Policy</a>.
+            </div>
+
+            <div style="text-align: center; margin-top: 14px;">
+                <a href="index.html" style="color: var(--text-muted); font-size: 13px; text-decoration: none;">
+                    <i class="fa-solid fa-arrow-left"></i> Return to Farm Store
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-                <img src="./images/logonew.png" alt="Footer Logo">
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Get App</h3>
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
     <script>
-        // Toggle Form tabs
-        function switchTab(type) {
-            const loginTab = document.getElementById('login-tab');
-            const registerTab = document.getElementById('register-tab');
-            const loginForm = document.getElementById('login-form-element');
-            const registerForm = document.getElementById('register-form-element');
+        function switchAuthTab(type) {
+            const tabIn = document.getElementById('tabSignIn');
+            const tabUp = document.getElementById('tabSignUp');
+            const formIn = document.getElementById('signInForm');
+            const formUp = document.getElementById('signUpForm');
 
-            if (type === 'login') {
-                loginTab.classList.add('active');
-                registerTab.classList.remove('active');
-                loginForm.classList.add('active');
-                registerForm.classList.remove('active');
+            if (type === 'signin') {
+                tabIn.classList.add('active');
+                tabUp.classList.remove('active');
+                formIn.style.display = 'block';
+                formUp.style.display = 'none';
             } else {
-                loginTab.classList.remove('active');
-                registerTab.classList.add('active');
-                loginForm.classList.remove('active');
-                registerForm.classList.add('active');
+                tabUp.classList.add('active');
+                tabIn.classList.remove('active');
+                formUp.style.display = 'block';
+                formIn.style.display = 'none';
             }
         }
 
-        // Form Submit Listeners
-        document.getElementById('login-form-element').addEventListener('submit', async (e) => {
+        function handleAuthSubmit(e, type) {
             e.preventDefault();
-            const email = document.getElementById('login-email').value;
-            const password = document.getElementById('login-password').value;
-
-            try {
-                const res = await fetch(`${API_BASE}/auth/login`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-                const data = await res.json();
-
-                if (data.success) {
-                    localStorage.setItem('pasugaaram_token', data.token);
-                    localStorage.setItem('pasugaaram_user', JSON.stringify(data.user));
-                    showToast('Successfully logged in!', 'success');
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 1000);
-                } else {
-                    showToast(data.error || 'Authentication failed', 'error');
-                }
-            } catch (err) {
-                showToast('Authentication connection error.', 'error');
-            }
-        });
-
-        document.getElementById('register-form-element').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const name = document.getElementById('register-name').value;
-            const email = document.getElementById('register-email').value;
-            const phone = document.getElementById('register-phone').value;
-            const password = document.getElementById('register-password').value;
-
-            try {
-                const res = await fetch(`${API_BASE}/auth/register`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, email, phone, password })
-                });
-                const data = await res.json();
-
-                if (data.success) {
-                    localStorage.setItem('pasugaaram_token', data.token);
-                    localStorage.setItem('pasugaaram_user', JSON.stringify(data.user));
-                    showToast('Registration complete! Welcome!', 'success');
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 1000);
-                } else {
-                    showToast(data.error || 'Registration failed', 'error');
-                }
-            } catch (err) {
-                showToast('Registration connection error.', 'error');
-            }
-        });
+            showToast(type === 'signin' ? 'Signed in successfully!' : 'Account created successfully!', 'success');
+            setTimeout(() => {
+                window.location.href = 'profile.html';
+            }, 1000);
+        }
     </script>
 </body>
 

@@ -1,134 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart — Pasugaaram</title>
+    <title>Shopping Cart — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body>
 
-    <!-- Sticky Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-            <div class="logo-text">
-                <h1>Pasugaaram</h1>
-                <span>Organic Evolution</span>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
-                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a></li>
-                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="app-body">
+    <div class="app-layout">
 
-    <div class="breadcrumb-container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Shopping Cart</li>
-        </ul>
-    </div>
-
-    <!-- Dynamic Cart Container -->
-    <div class="cart-page-container">
-        
-        <!-- Cart Items Table Wrapper -->
-        <div class="cart-table-wrapper">
-            <h2 style="margin-bottom: 20px; color: var(--primary-dark);">Your Fresh Produce Basket</h2>
-            <table class="cart-table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                        <th style="text-align: right;">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-table-body">
-                    <!-- Javascript populates items here -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Order Summary Card -->
-        <div class="summary-card">
-            <h3 class="summary-title">Basket Summary</h3>
-            <div class="summary-row">
-                <span>Items Subtotal</span>
-                <span id="subtotal-price">Rs.0</span>
-            </div>
-            <div class="summary-row">
-                <span>GST (5%)</span>
-                <span id="tax-price">Rs.0</span>
-            </div>
-            <div class="summary-row">
-                <span>Discount Promo</span>
-                <span id="discount-price" style="color: #22c55e;">Rs.0</span>
-            </div>
-            <div class="summary-row total">
-                <span>Grand Total</span>
-                <span id="total-price">Rs.0</span>
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
-            <!-- Coupon Input Section -->
-            <div class="coupon-section">
-                <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Have a Promo Coupon?</p>
-                <div class="coupon-input-wrapper">
-                    <input type="text" id="coupon-input" class="coupon-input" placeholder="e.g. ORGANIC10">
-                    <button class="btn-coupon-apply" onclick="applyCouponCode()">Apply</button>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house-chimney nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#categories-section" class="nav-link">
+                            <i class="fa-solid fa-shapes nav-icon"></i>
+                            <span class="nav-text">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#products-section" class="nav-link">
+                            <i class="fa-solid fa-box-archive nav-icon"></i>
+                            <span class="nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#hero-banner" class="nav-link">
+                            <i class="fa-solid fa-tags nav-icon"></i>
+                            <span class="nav-text">Offers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link active">
+                            <i class="fa-solid fa-receipt nav-icon"></i>
+                            <span class="nav-text">Orders & Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link">
+                            <i class="fa-regular fa-circle-question nav-icon"></i>
+                            <span class="nav-text">Help & Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
                 </div>
-                <div id="coupon-feedback" class="coupon-feedback"></div>
-            </div>
-
-            <!-- Action buttons -->
-            <a href="checkout.html" class="btn-primary btn-checkout" style="justify-content: center; display: flex;">Proceed to Checkout <i class="fas fa-arrow-right"></i></a>
-            <a href="index.html#categories" class="btn-secondary" style="margin-top: 12px; justify-content: center; display: flex; width: 100%;">Continue Shopping</a>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-                <img src="./images/logonew.png" alt="Footer Logo">
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Get App</h3>
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
+                <div class="promo-image-wrapper">
+                    <img src="./images/hero_main.jpg" alt="Organic produce" class="promo-thumb-img">
                 </div>
             </div>
+        </aside>
+
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Search groceries..."
+                        autocomplete="off">
+                </div>
+
+                <div class="header-actions">
+                    <div class="location-badge" id="locationSelector">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city" id="currentLocationText">Chennai, 600001</span>
+                        </div>
+                    </div>
+                    <button class="header-icon-btn" id="notificationBtn" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-count badge-red">1</span>
+                    </button>
+                    <button class="header-icon-btn" id="headerCartBtn" aria-label="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count badge-gold" id="cartCountBadge">3</span>
+                    </button>
+                    <a href="profile.html" class="user-avatar-btn">
+                        <span class="avatar-initial">Kg</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Shopping Basket</li>
+                </ul>
+
+                <div class="page-title-banner">
+                    <h2>Your Organic Basket</h2>
+                    <p>Farm-fresh items reserved for you. Free doorstep delivery over ₹499!</p>
+                </div>
+
+                <div class="cart-page-layout">
+                    <!-- Table Panel -->
+                    <div class="cart-table-panel">
+                        <table class="custom-cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Harvest Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-page-table-body">
+                                <!-- Populated dynamically by script -->
+                            </tbody>
+                        </table>
+                        <div id="cart-empty-message" style="display:none; text-align:center; padding: 40px 10px;">
+                            <i class="fa-solid fa-basket-shopping"
+                                style="font-size: 40px; color: var(--gold-primary); margin-bottom: 12px;"></i>
+                            <h3 style="color: var(--text-white);">Your Basket is Currently Empty</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 20px;">Explore our organic farm harvest
+                                and add fresh items.</p>
+                            <a href="index.html#products-section" class="btn-shop-gold">Explore Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Summary Panel -->
+                    <div class="order-summary-panel">
+                        <h3 class="summary-heading">Order Summary</h3>
+                        <div class="summary-line">
+                            <span>Items Subtotal</span>
+                            <span id="page-subtotal-price">₹240</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Farm Delivery Charge</span>
+                            <span id="page-delivery-price" style="color: #4ade80;">FREE</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Promo Discount</span>
+                            <span id="page-discount-price" class="highlight">-₹0</span>
+                        </div>
+                        <div class="summary-line total-line">
+                            <span>Grand Total</span>
+                            <span id="page-total-price">₹240</span>
+                        </div>
+
+                        <div class="coupon-box">
+                            <input type="text" id="cartCouponInput" class="coupon-field"
+                                placeholder="Enter code (e.g. PASU20)">
+                            <button class="coupon-btn" onclick="applyPageCoupon()">Apply</button>
+                        </div>
+                        <div id="couponStatusText" style="font-size: 12px; font-weight: 600;"></div>
+
+                        <a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+                        <a href="index.html#products-section" class="btn-view-cart">Continue Shopping</a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group">
+                <i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3>
+                <span class="drawer-badge" id="drawerItemCount">3 items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
+        <div class="cart-drawer-items" id="cartDrawerItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span class="subtotal-label">Subtotal</span>
+                <span class="subtotal-amount" id="drawerSubtotal">₹240</span>
+            </div>
+            <div class="cart-drawer-buttons">
+                <a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+            </div>
         </div>
-    </footer>
+    </aside>
+
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
+    <script>
+        // Specific script for cart page rendering
+        function renderCartTablePage() {
+            const tbody = document.getElementById('cart-page-table-body');
+            const emptyMsg = document.getElementById('cart-empty-message');
+            if (!tbody) return;
+
+            if (cart.length === 0) {
+                tbody.innerHTML = '';
+                if (emptyMsg) emptyMsg.style.display = 'block';
+                document.getElementById('page-subtotal-price').textContent = '₹0';
+                document.getElementById('page-total-price').textContent = '₹0';
+                return;
+            }
+
+            if (emptyMsg) emptyMsg.style.display = 'none';
+
+            let subtotal = 0;
+            tbody.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                return `
+                    <tr>
+                        <td>
+                            <div class="cart-prod-cell">
+                                <img src="${item.image}" alt="${item.name}" class="cart-prod-img" onerror="this.src='./images/cat_veg.jpg'">
+                                <div>
+                                    <div class="cart-prod-title">${item.name}</div>
+                                    <div class="cart-prod-unit">${item.unit || '1 unit'}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="cart-price-text">₹${item.price}</span></td>
+                        <td>
+                            <div class="drawer-qty-controls" style="display:inline-flex;">
+                                <button class="drawer-qty-btn" onclick="updateCartQty('${item.id}', -1); renderCartTablePage();"><i class="fa-solid fa-minus"></i></button>
+                                <span class="drawer-qty-val">${item.qty}</span>
+                                <button class="drawer-qty-btn" onclick="updateCartQty('${item.id}', 1); renderCartTablePage();"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </td>
+                        <td><span class="cart-price-text">₹${itemTotal}</span></td>
+                        <td>
+                            <button class="cart-action-btn" onclick="updateCartQty('${item.id}', -${item.qty}); renderCartTablePage();" title="Remove item">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            let discount = window.pageDiscount || 0;
+            let total = Math.max(0, subtotal - discount);
+
+            document.getElementById('page-subtotal-price').textContent = `₹${subtotal}`;
+            document.getElementById('page-discount-price').textContent = `-₹${discount}`;
+            document.getElementById('page-total-price').textContent = `₹${total}`;
+        }
+
+        function applyPageCoupon() {
+            const input = document.getElementById('cartCouponInput');
+            const status = document.getElementById('couponStatusText');
+            const code = input.value.trim().toUpperCase();
+
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
+            if (code === 'PASU20' || code === 'ORGANIC20') {
+                window.pageDiscount = Math.round(subtotal * 0.20);
+                status.style.color = '#4ade80';
+                status.textContent = 'Coupon applied: 20% discount saved!';
+                showToast('20% Discount Coupon Applied!', 'success');
+            } else if (code === 'ORGANIC10') {
+                window.pageDiscount = Math.round(subtotal * 0.10);
+                status.style.color = '#4ade80';
+                status.textContent = 'Coupon applied: 10% discount saved!';
+                showToast('10% Discount Coupon Applied!', 'success');
+            } else {
+                status.style.color = '#ef4444';
+                status.textContent = 'Invalid promo coupon code.';
+                showToast('Invalid Coupon Code', 'error');
+            }
+            renderCartTablePage();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCartTablePage);
+    </script>
 </body>
+
 </html>

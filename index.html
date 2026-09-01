@@ -5,305 +5,673 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasugaaram — The Organic Evolution</title>
+    <title>Pasugarram — Freshly Yours, Farm-to-Table</title>
+    <meta name="description"
+        content="Pasugarram provides fresh organic groceries, dairy, vegetables, fruits, and cold-pressed juices straight from local partner farms to your doorstep.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
-<body>
+<body class="app-body">
+    <!-- Main App Container Layout -->
+    <div class="app-layout">
 
-    <!-- Sticky Glassmorphic Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <a href="#"><img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-                <div class="logo-text">
-                    <h1>Pasugaaram</h1>
-                    <span>Organic Evolution</span>
-                </div>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> <span
-                            class="nav-item">Home</span></a></li>
-                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a>
-                </li>
-                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Animated Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <span class="hero-subtitle">100% Pure & Fresh Organic Products</span>
-            <h1 class="hero-title">Pasugaaram</h1>
-            <p class="hero-description">Nurtured by nature, harvested with love. Discover premium chemical-free fruits,
-                vegetables, honey, and organic manure straight from local organic farms.</p>
-            <div class="hero-buttons">
-                <a href="#categories" class="btn-primary">Explore Products <i class="fas fa-chevron-down"></i></a>
-                <a href="about.html" class="btn-secondary">Our Story <i class="fas fa-leaf"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advertisements / Promotion Carousel -->
-    <div class="section-title-wrapper">
-        <h2 class="section-title">Special Offers</h2>
-        <p class="section-subtitle">Fresh updates, farm-to-table delivery cycles, and organic farming achievements</p>
-    </div>
-
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="./images/adv1.jpg" alt="Organic farming produce" onerror="this.src='./images/bg.jpg'">
-        </div>
-        <div class="mySlides fade">
-            <img src="./images/adv2.jpg" alt="Fresh fruits collection" onerror="this.src='./images/bg3.jpg'">
-        </div>
-        <div class="mySlides fade">
-            <img src="./images/adv3.jpg" alt="Premium organic honey" onerror="this.src='./images/bg5.jpg'">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <!-- Product Categories section -->
-    <section id="categories">
-        <div class="section-title-wrapper">
-            <h2 class="section-title">Product Categories</h2>
-            <p class="section-subtitle">Flip each card to discover benefits and explore our premium organic catalog</p>
-        </div>
-
-        <div class="categories-container">
-            <!-- Fruits Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Fruits</h3>
-                        <img src="./images/c2.png" alt="Fruits">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Organic Fruits</h3>
-                        <ul>
-                            <li>Rich in essential vitamins</li>
-                            <li>Antioxidant booster</li>
-                            <li>High fiber nutrition</li>
-                            <li>Pesticide-free farming</li>
-                        </ul>
-                        <a href="fruits.html" class="btn-view">Browse Fruits</a>
-                    </div>
-                </div>
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
-            <!-- Vegetables Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Vegetables</h3>
-                        <img src="./images/c3.png" alt="Vegetables">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Vegetables</h3>
-                        <ul>
-                            <li>Harvested daily</li>
-                            <li>Zero chemical spray</li>
-                            <li>Rich mineral source</li>
-                            <li>Fresh leafy greens</li>
-                        </ul>
-                        <a href="vegetables.html" class="btn-view">Browse Veggies</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Honey Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Honey</h3>
-                        <img src="./images/Bee-Honey-PNG-Photos.png" alt="Honey">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Natural Honey</h3>
-                        <ul>
-                            <li>Raw & unprocessed</li>
-                            <li>Anti-inflammatory</li>
-                            <li>Natural blood purifier</li>
-                            <li>Sourced from hills</li>
-                        </ul>
-                        <a href="honey.html" class="btn-view">Browse Honey</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Milk Products Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Milk Products</h3>
-                        <img src="./images/milk-dairy.png" alt="Milk Products">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Dairy Products</h3>
-                        <ul>
-                            <li>A2 Cow milk origin</li>
-                            <li>Traditional butter churning</li>
-                            <li>High protein Paneer</li>
-                            <li>No synthetic hormones</li>
-                        </ul>
-                        <a href="milkproducts.html" class="btn-view">Browse Dairy</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Spices Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Spices</h3>
-                        <img src="./images/spices.png" alt="Spices">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Whole Spices</h3>
-                        <ul>
-                            <li>Handmade processing</li>
-                            <li>Rich original curcumin</li>
-                            <li>Intense premium aroma</li>
-                            <li>Antimicrobial values</li>
-                        </ul>
-                        <a href="spice.html" class="btn-view">Browse Spices</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sauce Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Sauces</h3>
-                        <img src="./images/sauce.png" alt="Sauces">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Organic Sauces</h3>
-                        <ul>
-                            <li>No added starch</li>
-                            <li>Zero artificial colors</li>
-                            <li>Naturally spiced flavours</li>
-                            <li>Low sodium counts</li>
-                        </ul>
-                        <a href="sauce.html" class="btn-view">Browse Sauces</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fresh Juice Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Fresh Juices</h3>
-                        <img src="./images/juice.png" alt="Juice">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Fresh Juices</h3>
-                        <ul>
-                            <li>Cold-pressed nutrition</li>
-                            <li>No concentrates</li>
-                            <li>100% immune booster</li>
-                            <li>Zero processed sugars</li>
-                        </ul>
-                        <a href="freshjuice.html" class="btn-view">Browse Juices</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fertilizers Card -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>Fertilizers</h3>
-                        <img src="./images/manure2.png" alt="Fertilizers">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Organic Manure</h3>
-                        <ul>
-                            <li>Natural Vermicompost</li>
-                            <li>Soil texture booster</li>
-                            <li>Enriches plant growth</li>
-                            <li>Porous aeration</li>
-                        </ul>
-                        <a href="fertilizer.html" class="btn-view">Browse Manures</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Count Section -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stat-card">
-                <i class="fas fa-users"></i>
-                <div class="stat-number" data-target="15000" data-suffix="+">0</div>
-                <div class="stat-label">Happy Customers</div>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-seedling"></i>
-                <div class="stat-number" data-target="100" data-suffix="%">0</div>
-                <div class="stat-label">Organic Certified</div>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-truck"></i>
-                <div class="stat-number" data-target="45" data-suffix=" mins">0</div>
-                <div class="stat-label">Freshness Guarantee</div>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-map-marked-alt"></i>
-                <div class="stat-number" data-target="120" data-suffix="+">0</div>
-                <div class="stat-label">Partner Farms</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <img src="./images/logonew.png" alt="Footer Logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
+            <!-- Navigation Links -->
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fa-solid fa-house-chimney nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#categories-section" class="nav-link" id="navCategories">
+                            <i class="fa-solid fa-shapes nav-icon"></i>
+                            <span class="nav-text">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products-section" class="nav-link" id="navProducts">
+                            <i class="fa-solid fa-box-archive nav-icon"></i>
+                            <span class="nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#hero-banner" class="nav-link" id="navOffers">
+                            <i class="fa-solid fa-tags nav-icon"></i>
+                            <span class="nav-text">Offers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link" id="navOrders">
+                            <i class="fa-solid fa-receipt nav-icon"></i>
+                            <span class="nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link" id="navAccount">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link" id="navHelp">
+                            <i class="fa-regular fa-circle-question nav-icon"></i>
+                            <span class="nav-text">Help & Support</span>
+                        </a>
+                    </li>
                 </ul>
+            </nav>
+
+            <!-- Sidebar Promo Card -->
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="#products-section" class="btn-promo-gold">Shop Now</a>
+                </div>
+                <div class="promo-image-wrapper">
+                    <img src="./images/hero_main.jpg" alt="Organic produce promo" class="promo-thumb-img"
+                        onerror="this.src='./images/adv1.jpg'">
+                </div>
             </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
+        </aside>
+
+        <!-- Sidebar Backdrop for Mobile -->
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Top Search & Header Bar -->
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Search Input Field -->
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input"
+                        placeholder="Search fresh groceries & dairy..." autocomplete="off">
+                    <button class="search-clear-btn" id="searchClearBtn" style="display: none;"
+                        aria-label="Clear Search">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Right Header Actions -->
+                <div class="header-actions">
+
+                    <!-- Location Selector -->
+                    <div class="location-badge" id="locationSelector" title="Change delivery location">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city" id="currentLocationText">Chennai, 600001</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down location-arrow"></i>
+                    </div>
+
+                    <!-- Notification Button -->
+                    <button class="header-icon-btn" id="notificationBtn" aria-label="Notifications"
+                        title="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-count badge-red">1</span>
+                    </button>
+
+                    <!-- Cart Button -->
+                    <button class="header-icon-btn" id="headerCartBtn" aria-label="View Shopping Cart"
+                        title="View Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count badge-gold" id="cartCountBadge">3</span>
+                    </button>
+
+                    <!-- Profile Avatar -->
+                    <a href="profile.html" class="user-avatar-btn" id="userProfileBtn" title="User Profile">
+                        <span class="avatar-initial">Kg</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Scrollable Content View -->
+            <div class="content-scrollable">
+
+                <!-- Hero Promo Banner Carousel -->
+                <section class="hero-carousel-section" id="hero-banner">
+                    <div class="hero-banner-slider">
+
+                        <!-- Slide 1 -->
+                        <div class="hero-slide active" id="slide1">
+                            <div class="hero-slide-bg" style="background-image: url('./images/hero_main.jpg');"></div>
+                            <div class="hero-slide-overlay"></div>
+                            <div class="hero-slide-content">
+                                <span class="hero-tag">DAILY HARVEST FRESH:</span>
+                                <h2 class="hero-heading">Get Up To <span class="text-gold">20% OFF</span><br>Your First
+                                    Order</h2>
+                                <a href="#products-section" class="btn-shop-gold">Shop Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="hero-slide" id="slide2">
+                            <div class="hero-slide-bg" style="background-image: url('./images/adv2.jpg');"></div>
+                            <div class="hero-slide-overlay"></div>
+                            <div class="hero-slide-content">
+                                <span class="hero-tag">FARM DIRECT TO HOME:</span>
+                                <h2 class="hero-heading">100% Pure <span class="text-gold">A2 Dairy</span><br>& Farm
+                                    Eggs</h2>
+                                <a href="#products-section" class="btn-shop-gold"
+                                    onclick="filterByCategory('milk')">Explore Dairy</a>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="hero-slide" id="slide3">
+                            <div class="hero-slide-bg" style="background-image: url('./images/adv3.jpg');"></div>
+                            <div class="hero-slide-overlay"></div>
+                            <div class="hero-slide-content">
+                                <span class="hero-tag">HARVESTED EVERY MORNING:</span>
+                                <h2 class="hero-heading">Crisp Green <span class="text-gold">Organic
+                                        Veggies</span><br>Zero Chemicals</h2>
+                                <a href="#products-section" class="btn-shop-gold"
+                                    onclick="filterByCategory('vegetables')">Shop Veggies</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slide Dots Indicator -->
+                    <div class="carousel-dots-container">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section class="catalog-section" id="categories-section">
+                    <div class="section-header-row">
+                        <h2 class="section-heading">Categories</h2>
+                        <a href="vegetables.html" class="view-all-link" id="viewAllCategoriesBtn">View All</a>
+                    </div>
+
+                    <div class="categories-cards-track" id="categoriesTrack">
+
+                        <!-- Category 1: Vegetables -->
+                        <a href="vegetables.html" class="category-card active" data-cat="vegetables" title="Browse Organic Vegetables">
+                            <div class="category-img-box">
+                                <img src="./images/cat_veg.jpg" alt="Fresh Vegetables"
+                                    onerror="this.src='./images/c3.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Fresh Vegetables</h3>
+                                <span class="category-sub">Your First Choice</span>
+                            </div>
+                        </a>
+
+                        <!-- Category 2: Dairy -->
+                        <a href="milkproducts.html" class="category-card" data-cat="milk" title="Browse A2 Dairy Products">
+                            <div class="category-img-box">
+                                <img src="./images/cat_dairy.jpg" alt="Farm-Fresh Dairy"
+                                    onerror="this.src='./images/milk-dairy.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Farm-Fresh Dairy</h3>
+                                <span class="category-sub">A2 Cow Milk & More</span>
+                            </div>
+                        </a>
+
+                        <!-- Category 3: Fruits & Poultry -->
+                        <a href="fruits.html" class="category-card" data-cat="fruits" title="Browse Farm Fruits">
+                            <div class="category-img-box">
+                                <img src="./images/cat_fruits_eggs.jpg" alt="Fruits, Eggs & Poultry"
+                                    onerror="this.src='./images/c2.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Fruits, Eggs & Poultry</h3>
+                                <span class="category-sub">Farm Natural Picks</span>
+                            </div>
+                        </a>
+
+                        <!-- Category 4: Raw Honey -->
+                        <a href="honey.html" class="category-card" data-cat="honey" title="Browse Raw Honey">
+                            <div class="category-img-box">
+                                <img src="./images/cat_bakery.jpg" alt="Raw Honey & Breads"
+                                    onerror="this.src='./images/Bee-Honey-PNG-Photos.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Raw Forest Honey</h3>
+                                <span class="category-sub">Pure Wild Honey</span>
+                            </div>
+                        </a>
+
+                        <!-- Category 5: Staples & Spices -->
+                        <a href="spice.html" class="category-card" data-cat="spices" title="Browse Organic Spices">
+                            <div class="category-img-box">
+                                <img src="./images/cat_staples.jpg" alt="Staples & Spices"
+                                    onerror="this.src='./images/spices.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Staples & Spices</h3>
+                                <span class="category-sub">Organic Pulses & Herbs</span>
+                            </div>
+                        </a>
+
+                        <!-- Category 6: Beverages -->
+                        <a href="freshjuice.html" class="category-card" data-cat="juice" title="Browse Cold-Pressed Juices">
+                            <div class="category-img-box">
+                                <img src="./images/cat_beverages.png" alt="Beverages"
+                                    onerror="this.src='./images/juice.png'">
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Beverages</h3>
+                                <span class="category-sub">Cold-Pressed Juices</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <!-- Products Section -->
+                <section class="catalog-section" id="products-section">
+                    <div class="section-header-row">
+                        <div class="header-left">
+                            <h2 class="section-heading">Products</h2>
+                            <span class="active-filter-badge" id="activeFilterBadge" style="display: none;">All
+                                Categories</span>
+                        </div>
+                        <div class="products-filter-tabs">
+                            <button class="filter-tab active" data-filter="all">All</button>
+                            <button class="filter-tab" data-filter="vegetables">Vegetables</button>
+                            <button class="filter-tab" data-filter="milk">Dairy</button>
+                            <button class="filter-tab" data-filter="fruits">Fruits</button>
+                            <button class="filter-tab" data-filter="honey">Honey</button>
+                            <button class="filter-tab" data-filter="juice">Juices</button>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid-container" id="productsGridContainer">
+
+                        <!-- Product Card 1: A2 Milk -->
+                        <div class="product-item-card" data-product-id="m_a2" data-category="milk">
+                            <div class="product-thumb-wrapper">
+                                <img src="./images/cat_dairy.jpg" alt="A2 Organic Cow Milk" class="product-img"
+                                    onerror="this.src='./milk/milk.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.9</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">A2 Organic Cow Milk</h4>
+                                <span class="product-unit">1L</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>85
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('m_a2', 'A2 Organic Cow Milk', 85, '1L', './images/cat_dairy.jpg')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2: English Spinach -->
+                        <div class="product-item-card" data-product-id="v_spinach" data-category="vegetables">
+                            <div class="product-thumb-wrapper">
+                                <img src="./vegge/salad-leaf.png" alt="Fresh English Spinach" class="product-img"
+                                    onerror="this.src='./images/cat_veg.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.9</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Fresh English Spinach</h4>
+                                <span class="product-unit">200g</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>45
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('v_spinach', 'Fresh English Spinach', 45, '200g', './vegge/salad-leaf.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3: Organic Eggs -->
+                        <div class="product-item-card" data-product-id="f_eggs" data-category="fruits">
+                            <div class="product-thumb-wrapper">
+                                <img src="./images/cat_fruits_eggs.jpg" alt="Farm-Fresh Organic Eggs"
+                                    class="product-img" onerror="this.src='./images/adv1.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.8</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Farm-Fresh Organic Eggs</h4>
+                                <span class="product-unit">6 Pack</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>110
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('f_eggs', 'Farm-Fresh Organic Eggs', 110, '6 Pack', './images/cat_fruits_eggs.jpg')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4: Farm Fresh Tomatoes -->
+                        <div class="product-item-card" data-product-id="v_tomato" data-category="vegetables">
+                            <div class="product-thumb-wrapper">
+                                <img src="./vegge/vegetable.png" alt="Farm Fresh Tomatoes" class="product-img"
+                                    onerror="this.src='./images/c3.png'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.7</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Farm Fresh Tomatoes</h4>
+                                <span class="product-unit">500g</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>30
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('v_tomato', 'Farm Fresh Tomatoes', 30, '500g', './vegge/vegetable.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5: Organic Bananas -->
+                        <div class="product-item-card" data-product-id="f_banana" data-category="fruits">
+                            <div class="product-thumb-wrapper">
+                                <img src="./fruits/banana.png" alt="Organic Bananas" class="product-img"
+                                    onerror="this.src='./images/c2.png'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.8</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Organic Bananas</h4>
+                                <span class="product-unit">1 Bunch</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>40
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('f_banana', 'Organic Bananas', 40, '1 Bunch', './fruits/banana.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6: Wild Mountain Honey -->
+                        <div class="product-item-card" data-product-id="h_wild" data-category="honey">
+                            <div class="product-thumb-wrapper">
+                                <img src="./images/Bee-Honey-PNG-Photos.png" alt="Wild Mountain Honey"
+                                    class="product-img" onerror="this.src='./honey/wild.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.9</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Wild Forest Raw Honey</h4>
+                                <span class="product-unit">500g</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>420
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('h_wild', 'Wild Forest Raw Honey', 420, '500g', './images/Bee-Honey-PNG-Photos.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7: Cold-Pressed Orange Juice -->
+                        <div class="product-item-card" data-product-id="j_orange" data-category="juice">
+                            <div class="product-thumb-wrapper">
+                                <img src="./images/juice.png" alt="Fresh Cold-Pressed Orange Juice" class="product-img"
+                                    onerror="this.src='./freash juice/Orange_Juice.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.8</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Cold-Pressed Orange Juice</h4>
+                                <span class="product-unit">500ml</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>60
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('j_orange', 'Cold-Pressed Orange Juice', 60, '500ml', './images/juice.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8: Organic Broccoli -->
+                        <div class="product-item-card" data-product-id="v_broccoli" data-category="vegetables">
+                            <div class="product-thumb-wrapper">
+                                <img src="./vegge/broccoli.png" alt="Organic Broccoli" class="product-img"
+                                    onerror="this.src='./images/cat_veg.jpg'">
+                                <div class="product-rating-pill">
+                                    <i class="fa-solid fa-star star-icon"></i>
+                                    <span class="rating-val">4.7</span>
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <h4 class="product-title">Fresh Farm Broccoli</h4>
+                                <span class="product-unit">500g</span>
+                                <div class="product-footer-row">
+                                    <div class="product-price">
+                                        <span class="currency">₹</span>80
+                                    </div>
+                                    <button class="add-cart-btn"
+                                        onclick="addToCartItem('v_broccoli', 'Fresh Farm Broccoli', 80, '500g', './vegge/broccoli.png')"
+                                        aria-label="Add to cart">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Footer Section -->
+                <footer class="app-footer">
+                    <div class="footer-grid">
+                        <div class="footer-brand-col">
+                            <h2 class="footer-brand-title">Pasugarram</h2>
+                            <p class="footer-desc">Freshly Yours, Farm-to-Table. Premium organic produce, A2 dairy, and
+                                natural goodness delivered daily to your home.</p>
+                            <div class="footer-social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-links-col">
+                            <h4 class="footer-col-title">Quick Links</h4>
+                            <ul class="footer-link-list">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ & Help</a></li>
+                                <li><a href="policy.html">Privacy Policy</a></li>
+                                <li><a href="terms&conditions.html">Terms of Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-col">
+                            <h4 class="footer-col-title">Categories</h4>
+                            <ul class="footer-link-list">
+                                <li><a href="vegetables.html">Fresh Vegetables</a></li>
+                                <li><a href="fruits.html">Farm Fruits</a></li>
+                                <li><a href="milkproducts.html">A2 Dairy Products</a></li>
+                                <li><a href="honey.html">Raw Forest Honey</a></li>
+                                <li><a href="freshjuice.html">Cold-Pressed Juices</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-newsletter-col">
+                            <h4 class="footer-col-title">Stay Connected</h4>
+                            <p class="newsletter-sub">Subscribe to get secret weekly discount vouchers & fresh harvest
+                                updates.</p>
+                            <form class="newsletter-form"
+                                onsubmit="event.preventDefault(); showToast('Subscribed successfully!', 'success');">
+                                <input type="email" placeholder="Enter your email" required class="newsletter-input">
+                                <button type="submit" class="newsletter-btn"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+
             </div>
-            <div class="footer-col">
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
+        </main>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group">
+                <i class="fa-solid fa-bag-shopping drawer-icon"></i>
+                <h3 class="drawer-title">Your Fresh Basket</h3>
+                <span class="drawer-badge" id="drawerItemCount">3 items</span>
+            </div>
+            <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-drawer-items" id="cartDrawerItems">
+            <!-- Dynamic Cart Items Rendered Here -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span class="subtotal-label">Subtotal</span>
+                <span class="subtotal-amount" id="drawerSubtotal">₹240</span>
+            </div>
+            <div class="cart-delivery-note">
+                <i class="fa-solid fa-truck-fast"></i> Free delivery on orders over ₹499
+            </div>
+            <div class="cart-drawer-buttons">
+                <a href="cart.html" class="btn-view-cart">View Full Cart</a>
+                <a href="checkout.html" class="btn-checkout-gold">Proceed to Checkout</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Location Modal -->
+    <div class="modal-backdrop" id="locationModal">
+        <div class="location-modal-card">
+            <div class="modal-header">
+                <h3>Select Delivery Location</h3>
+                <button class="modal-close-btn" id="closeLocationModal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">Choose your delivery pin to view fresh available harvest in your area:</p>
+                <div class="location-options-list">
+                    <button class="loc-opt-btn active" data-loc="Chennai, 600001">
+                        <i class="fa-solid fa-location-dot"></i> Chennai, 600001 (Central)
+                    </button>
+                    <button class="loc-opt-btn" data-loc="Chennai, 600028">
+                        <i class="fa-solid fa-location-dot"></i> Chennai, 600028 (R.A. Puram)
+                    </button>
+                    <button class="loc-opt-btn" data-loc="Chennai, 600041">
+                        <i class="fa-solid fa-location-dot"></i> Chennai, 600041 (Thiruvanmiyur)
+                    </button>
+                    <button class="loc-opt-btn" data-loc="Coimbatore, 641001">
+                        <i class="fa-solid fa-location-dot"></i> Coimbatore, 641001
+                    </button>
+                    <button class="loc-opt-btn" data-loc="Bangalore, 560001">
+                        <i class="fa-solid fa-location-dot"></i> Bangalore, 560001
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+    </div>
 
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Mobile Bottom Navigation Bar (App Experience) -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#categories-section" class="mobile-nav-item" id="mobileCatNav">
+            <i class="fa-solid fa-shapes"></i>
+            <span>Categories</span>
+        </a>
+        <a href="javascript:void(0)" class="mobile-nav-item" id="mobileCartTrigger">
+            <div class="mobile-cart-badge-wrap">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="mobile-badge" id="mobileCartBadge">3</span>
+            </div>
+            <span>Cart</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Main JavaScript Logic -->
     <script src="script.js"></script>
 </body>
 

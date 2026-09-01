@@ -1,129 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout — Pasugaaram</title>
+    <title>Checkout — Pasugarram</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body>
 
-    <!-- Sticky Header -->
-    <header class="home-header">
-        <div class="logo-container">
-            <img src="./images/logonew.png" class="company_logo" alt="Pasugaaram Logo">
-            <div class="logo-text">
-                <h1>Pasugaaram</h1>
-                <span>Organic Evolution</span>
+<body class="app-body">
+    <div class="app-layout">
+
+        <!-- Left Sidebar Navigation -->
+        <aside class="app-sidebar" id="appSidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="brand-logo">
+                    <h1 class="brand-title">Pasugarram</h1>
+                    <span class="brand-tagline">Freshly Yours, Farm-to-Table</span>
+                </a>
+                <button class="mobile-sidebar-close" id="sidebarCloseBtn" aria-label="Close Sidebar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> <span class="nav-item">Home</span></a></li>
-                <li><a href="about.html"><i class="fa-solid fa-message"></i> <span class="nav-item">About</span></a></li>
-                <li><a href="faq.html"><i class="fas fa-question-circle"></i> <span class="nav-item">FAQ</span></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="breadcrumb-container">
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cart.html">Shopping Cart</a></li>
-            <li>Checkout</li>
-        </ul>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house-chimney nav-icon"></i>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#categories-section" class="nav-link">
+                            <i class="fa-solid fa-shapes nav-icon"></i>
+                            <span class="nav-text">Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#products-section" class="nav-link">
+                            <i class="fa-solid fa-box-archive nav-icon"></i>
+                            <span class="nav-text">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link">
+                            <i class="fa-solid fa-receipt nav-icon"></i>
+                            <span class="nav-text">Orders & Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <span class="nav-text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link">
+                            <i class="fa-regular fa-circle-question nav-icon"></i>
+                            <span class="nav-text">Help & Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-promo-card">
+                <div class="promo-content">
+                    <span class="promo-label">Get Up To</span>
+                    <h3 class="promo-discount">20% OFF</h3>
+                    <p class="promo-sub">Your First Order</p>
+                    <a href="index.html#products-section" class="btn-promo-gold">Shop Now</a>
+                </div>
+                <div class="promo-image-wrapper">
+                    <img src="./images/hero_main.jpg" alt="Organic produce" class="promo-thumb-img">
+                </div>
+            </div>
+        </aside>
+
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header-bar">
+                <div class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="globalSearchInput" class="search-input" placeholder="Search groceries..."
+                        autocomplete="off">
+                </div>
+
+                <div class="header-actions">
+                    <div class="location-badge">
+                        <i class="fa-solid fa-location-dot location-pin"></i>
+                        <div class="location-text">
+                            <span class="location-label">Deliver to</span>
+                            <span class="location-city">Chennai, 600001</span>
+                        </div>
+                    </div>
+                    <button class="header-icon-btn" id="headerCartBtn" aria-label="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge-count badge-gold" id="cartCountBadge">3</span>
+                    </button>
+                    <a href="profile.html" class="user-avatar-btn">
+                        <span class="avatar-initial">Kg</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="content-scrollable">
+                <ul class="breadcrumb-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><i class="fa-solid fa-chevron-right"></i></li>
+                    <li>Secure Checkout</li>
+                </ul>
+
+                <div class="page-title-banner">
+                    <h2>Express Checkout</h2>
+                    <p>Provide your delivery address and choose payment option to receive tomorrow's morning harvest.
+                    </p>
+                </div>
+
+                <div class="checkout-page-layout">
+                    <!-- Form Panel -->
+                    <form class="checkout-form-panel" id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+                        <!-- Shipping Section -->
+                        <div>
+                            <div class="form-block-title">
+                                <i class="fa-solid fa-truck-ramp-box"></i> Delivery Information
+                            </div>
+                            <div class="form-grid-2">
+                                <div class="form-field-group">
+                                    <label>Full Name</label>
+                                    <input type="text" required class="form-field-input" placeholder="e.g. Kannan G"
+                                        value="Kannan G">
+                                </div>
+                                <div class="form-field-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" required class="form-field-input"
+                                        placeholder="e.g. +91 98765 43210" value="+91 98401 23456">
+                                </div>
+                            </div>
+                            <div class="form-field-group" style="margin-top: 14px;">
+                                <label>Street Address / Apartment</label>
+                                <input type="text" required class="form-field-input"
+                                    placeholder="House/Flat No, Street Name, Area"
+                                    value="Flat 4B, Emerald Heights, Greenways Road">
+                            </div>
+                            <div class="form-grid-2" style="margin-top: 14px;">
+                                <div class="form-field-group">
+                                    <label>City</label>
+                                    <input type="text" required class="form-field-input" value="Chennai">
+                                </div>
+                                <div class="form-field-group">
+                                    <label>Postal Pincode</label>
+                                    <input type="text" required class="form-field-input" value="600028">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Slot -->
+                        <div>
+                            <div class="form-block-title">
+                                <i class="fa-solid fa-clock"></i> Preferred Delivery Slot
+                            </div>
+                            <div class="form-field-group">
+                                <select class="form-field-select">
+                                    <option>Tomorrow Early Morning (6:00 AM - 8:30 AM) - Recommended Freshness</option>
+                                    <option>Tomorrow Morning (8:30 AM - 11:30 AM)</option>
+                                    <option>Tomorrow Evening (4:30 PM - 7:30 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Payment Option -->
+                        <div>
+                            <div class="form-block-title">
+                                <i class="fa-solid fa-credit-card"></i> Payment Method
+                            </div>
+                            <div class="payment-methods-grid">
+                                <div class="payment-opt-card active" onclick="selectPaymentMethod(this, 'UPI')">
+                                    <i class="fa-solid fa-qrcode"></i>
+                                    <span>Instant UPI</span>
+                                </div>
+                                <div class="payment-opt-card" onclick="selectPaymentMethod(this, 'Card')">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    <span>Cards / NetBanking</span>
+                                </div>
+                                <div class="payment-opt-card" onclick="selectPaymentMethod(this, 'COD')">
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                                    <span>Pay on Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-checkout-gold"
+                            style="border: none; cursor: pointer; padding: 16px; font-size: 16px;">
+                            Place Harvest Order (₹<span id="btnTotalPrice">240</span>) <i
+                                class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Order Review Summary -->
+                    <div class="order-summary-panel">
+                        <h3 class="summary-heading">Basket Summary</h3>
+                        <div id="checkoutSummaryItems"
+                            style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px;">
+                            <!-- Populated dynamically -->
+                        </div>
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">₹240</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Farm Delivery</span>
+                            <span style="color: #4ade80;">FREE</span>
+                        </div>
+                        <div class="summary-line total-line">
+                            <span>Total Payable</span>
+                            <span id="checkoutTotal">₹240</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="app-footer">
+                    <div class="footer-bottom-bar">
+                        <p>&copy; 2026 Pasugarram Private Limited. All rights reserved.</p>
+                        <p>Harvested with love for healthy living.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
     </div>
 
-    <!-- Checkout Grid -->
-    <div class="cart-page-container">
-        <div class="checkout-grid" style="grid-column: 1/-1; display: grid; gap: 40px;">
-            
-            <!-- Delivery Details Form -->
-            <div class="checkout-form-section">
-                <h2 style="color: var(--primary-dark); margin-bottom: 25px;">Shipping & Billing Information</h2>
-                <form id="checkout-form">
-                    <div class="form-group" style="margin-bottom: 18px;">
-                        <label for="shipping-address">Delivery Address</label>
-                        <textarea id="shipping-address" class="form-input" rows="4" placeholder="Enter complete home address with landmark" style="resize: none;" required></textarea>
-                    </div>
-
-                    <div class="form-group" style="margin-bottom: 18px;">
-                        <label for="payment-method">Select Payment Method</label>
-                        <select id="payment-method" class="form-input" style="height: 48px;" required>
-                            <option value="COD">Cash on Delivery (COD)</option>
-                            <option value="UPI">Pay via UPI (on delivery)</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">Confirm & Place Order <i class="fas fa-check"></i></button>
-                </form>
+    <!-- Order Placed Success Modal -->
+    <div class="modal-backdrop" id="orderSuccessModal">
+        <div class="location-modal-card" style="text-align: center;">
+            <div
+                style="width: 60px; height: 60px; border-radius: 50%; background: rgba(74, 222, 128, 0.15); border: 2px solid #4ade80; color: #4ade80; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 16px auto;">
+                <i class="fa-solid fa-check"></i>
             </div>
-
-            <!-- Checkout Order Summary -->
-            <div class="summary-card">
-                <h3 class="summary-title">Your Order Summary</h3>
-                <div id="checkout-items-summary" style="margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-                    <!-- Populated dynamically by script.js -->
+            <h3 style="color: var(--text-white); font-size: 22px; margin-bottom: 6px;">Order Confirmed!</h3>
+            <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Your fresh harvest order has been
+                received. Our partner farmers are harvesting your fresh produce now.</p>
+            <div
+                style="background-color: var(--bg-card); padding: 14px; border-radius: var(--radius-md); text-align: left; margin-bottom: 20px; font-size: 13px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                    <span style="color: var(--text-muted);">Order ID:</span>
+                    <span style="font-weight: 700; color: var(--gold-primary);" id="confirmedOrderId">#PASU-98421</span>
                 </div>
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="check-subtotal">Rs.0</span>
-                </div>
-                <div class="summary-row">
-                    <span>GST (5%)</span>
-                    <span id="check-tax">Rs.0</span>
-                </div>
-                <div class="summary-row">
-                    <span>Coupon Discount</span>
-                    <span id="check-discount" style="color: #22c55e;">Rs.0</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Total Amount</span>
-                    <span id="check-total">Rs.0</span>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">Expected Delivery:</span>
+                    <span style="font-weight: 700; color: var(--text-white);">Tomorrow, 7:00 AM</span>
                 </div>
             </div>
-
+            <a href="profile.html" class="btn-checkout-gold" style="display: block; width: 100%;">View Order History</a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-logo">
-                <h2>Pasugaaram</h2>
-                <p>The Organic Evolution since 2018. Delivering nature's finest foods straight to your door step.</p>
-                <img src="./images/logonew.png" alt="Footer Logo">
-            </div>
-            <div class="footer-col">
-                <h3>Policy Info</h3>
-                <ul>
-                    <li><a href="policy.html">Privacy Policy</a></li>
-                    <li><a href="terms&conditions.html">Terms and Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">Help & FAQ</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Get App</h3>
-                <div class="footer-download">
-                    <img src="./images/gplay.png" alt="Google Play Store">
-                    <img src="./images/qrcode.png" alt="QR Code scanner">
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pasugaaram Private Limited. All rights reserved.</p>
-            <p>Designed with ❤️ for Healthy living.</p>
-        </div>
-    </footer>
+    <div class="toast-container" id="toastContainer"></div>
 
     <script src="script.js"></script>
+    <script>
+        function renderCheckoutPage() {
+            const container = document.getElementById('checkoutSummaryItems');
+            if (!container) return;
+
+            let subtotal = 0;
+            container.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                return `
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 13px;">
+                        <span style="color: var(--text-white);">${item.name} <small style="color: var(--text-muted);">x${item.qty}</small></span>
+                        <span style="font-weight: 700; color: var(--gold-primary);">₹${itemTotal}</span>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('checkoutSubtotal').textContent = `₹${subtotal}`;
+            document.getElementById('checkoutTotal').textContent = `₹${subtotal}`;
+            document.getElementById('btnTotalPrice').textContent = `${subtotal}`;
+        }
+
+        function selectPaymentMethod(element, method) {
+            document.querySelectorAll('.payment-opt-card').forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+            showToast(`Selected ${method} Payment`, 'success');
+        }
+
+        function handlePlaceOrder(e) {
+            e.preventDefault();
+            const orderId = '#PASU-' + Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('confirmedOrderId').textContent = orderId;
+
+            // Clear cart
+            cart = [];
+            localStorage.setItem('pasugaaram_cart', JSON.stringify(cart));
+            updateCartUI();
+
+            // Show success modal
+            document.getElementById('orderSuccessModal').classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCheckoutPage);
+    </script>
 </body>
+
 </html>
